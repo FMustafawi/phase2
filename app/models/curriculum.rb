@@ -8,8 +8,7 @@ class Curriculum < ApplicationRecord
     scope :active, -> { where('active = ?', true) }
     scope :inactive, -> { where('active = ?', false) }
     scope :alphabetical, -> { order('name') }
-    scope :for_rating, lambda { |rating| joins(:curriculums.where('curriculums.rating == ?',rating))}
-
+    scope :for_rating, -> (rating){ where 'min_rating = ? OR max_rating = ?', rating,  rating}
 
 
 end

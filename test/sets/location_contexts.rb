@@ -1,18 +1,17 @@
 module Contexts 
-    module InstructorContexts
+    module LocationContexts
         
-        #### MAKE SURE YOU CREATE CURRICULUMS BEFORE THIS, THEN CHANGE CURRICULUM ID VALUE (LOCATION TOO)
-        def create_instructors
-            @i1 = FactoryBot.create(:instructor, first_name: "Fatima", last_name: "Mustafawi", email: "famustaf@andrew.cmu.edu", phone: "12345678")
-            @i2 = FactoryBot.create(:instructor, first_name: "Noor", last_name: "Aldahneem", "ndahneem@andrew.cmu.edu", phone: "34567896")
-            @i3 = FactoryBot.create(:instructor, first_name: "Maaruf", last_name: "Zakaria", bio: "Pretty good at chess", "mzakaria@andrew.cmu.edu", phone: "55664438")
+        def create_locations
+            @l1 = FactoryBot.create(:location, name: "CMU", street_1: "5001 Forbes Ave", street_2: "224 Suite", city: "Pittsburgh", state: "PA", zip: "15213", max_capacity: 100)
+            @l2 = FactoryBot.create(:location, name: "CMU-Q", street_1: "Al-Luqta", street_2: "Education City", city: "AlRayan", state: "QA", zip: "00974", max_capacity: 20)
+            @l3 = FactoryBot.create(:location, name: "C Bing", street_1: "15 Yemen Road", city: "Yemen", state: "YE", zip: "12345", max_capacity: 90, active: false)
         end  
         
-        def destroy_instructors
-            @i1.destroy
-            @i2.destroy
-            @i3.destroy
-        end
+        # def delete_locations
+        #     @l1.delete
+        #     @l2.delete
+        #     @l3.delete
+        # end
         
     end
     

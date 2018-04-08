@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180403202705) do
+ActiveRecord::Schema.define(version: 20180406204630) do
 
   create_table "camp_instructors", force: :cascade do |t|
     t.integer "camp_id"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20180403202705) do
     t.date "end_date"
     t.string "time_slot"
     t.integer "max_students"
-    t.boolean "active"
+    t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20180403202705) do
     t.integer "min_rating"
     t.integer "max_rating"
     t.text "description"
-    t.boolean "active"
+    t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20180403202705) do
     t.text "bio"
     t.string "email"
     t.string "phone"
-    t.boolean "active"
+    t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20180403202705) do
     t.string "state"
     t.string "zip"
     t.integer "max_capacity"
-    t.boolean "active"
+    t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
